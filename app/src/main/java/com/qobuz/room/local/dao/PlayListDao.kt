@@ -9,8 +9,10 @@ import com.qobuz.room.local.model.query.PlayListTrackQuery
 @Dao
 abstract class PlayListDao : BaseDao<PlayListEntity>() {
 
-
     @Transaction
     @Query("SELECT * FROM PLAYLIST")
     abstract fun getAllPlayListWithTracks(): List<PlayListTrackQuery>
+
+    //Save
+
 }
