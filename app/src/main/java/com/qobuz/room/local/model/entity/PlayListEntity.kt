@@ -4,8 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Album")
-class AlbumEntity(
+@Entity(tableName = "PlayList")
+data class PlayListEntity(
 
     @PrimaryKey
     @ColumnInfo(name = "id")
@@ -14,7 +14,6 @@ class AlbumEntity(
     @ColumnInfo(name = "name")
     val name: String,
 
-    @ColumnInfo(name = "artistId")
-    val artistId : String
-
+    @ColumnInfo(name = "public")
+    val public: Boolean
 )
