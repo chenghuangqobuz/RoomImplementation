@@ -3,7 +3,7 @@ A POC for Room Implementation
 
 
 
-Ce POC est pour objectif de implementer ROOM propre.
+##Ce POC est pour objectif de implementer ROOM propre.
 
 Pour Room : 
 Il y a plusieurs principaux : 
@@ -12,6 +12,7 @@ Entyty représente que la schema de BDD
 - ENTITY
 - ENTITY_RELATION (définit many to many relationship)
 
+```
 @Entity(tableName = "Track")
 data class TrackEntity(
 
@@ -28,11 +29,11 @@ data class TrackEntity(
     @ColumnInfo(name = "albumId")
     val albumId: String
 )
-
+```
 
 Avec ROOM, il propose des object pour faire query
 - QUERY 
-
+```
 class PlayListTrackQuery (
 
     @Embedded
@@ -45,13 +46,13 @@ class PlayListTrackQuery (
     )
     val tracks: List<TrackEntity>
 )
-
+```
 
 - DAO Pour CRUD (aussi pour le LIST)
 
 
-C'est compliqué de faire save/delet one-to-many et many-to-many
-Cette POC est pour trouver la meilleur de pratique pour ce point
+C'est compliqué de faire save/delete one-to-many et many-to-many
+Cette POC est pour trouver la meilleur pratique pour ce point
 
 
 
