@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-
 @Entity(tableName = "Track")
 data class TrackEntity(
 
@@ -13,8 +12,11 @@ data class TrackEntity(
     val id: String,
 
     @ColumnInfo(name = "name")
-    val name : String?,
+    val name: String?,
 
     @ColumnInfo(name = "length")
-    val length : Int
+    val length: Int,
+
+    @ColumnInfo(name = "albumId")
+    val albumId: String
 )
