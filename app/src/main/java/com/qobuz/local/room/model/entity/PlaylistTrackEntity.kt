@@ -12,13 +12,13 @@ import androidx.room.Index
             entity = PlaylistEntity::class,
             parentColumns = ["playlistId"],
             childColumns = ["playlistId"],
-            onDelete = ForeignKey.NO_ACTION
+            onDelete = ForeignKey.SET_NULL
         ),
         ForeignKey(
             entity = TrackEntity::class,
             parentColumns = ["trackId"],
             childColumns = ["trackId"],
-            onDelete = ForeignKey.NO_ACTION
+            onDelete = ForeignKey.SET_NULL
         )
     ],
     indices = [Index(value = ["playlistId", "trackId"], name = "index", unique = true)]

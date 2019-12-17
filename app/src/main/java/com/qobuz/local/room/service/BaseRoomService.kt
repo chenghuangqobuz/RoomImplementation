@@ -1,8 +1,8 @@
-package com.qobuz.local.service
+package com.qobuz.local.room.service
 
 import com.qobuz.local.room.dao.BaseDao
 
-abstract class BaseService<T>(val baseDao: BaseDao<T>) {
+abstract class BaseRoomService<T>(val baseDao: BaseDao<T>) {
 
     open fun upsert(t: T) {
         baseDao.upsert(t)

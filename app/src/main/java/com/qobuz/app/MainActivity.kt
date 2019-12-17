@@ -1,7 +1,8 @@
-package com.qobuz.local
+package com.qobuz.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.qobuz.local.R
 
 class MainActivity : AppCompatActivity() {
 
