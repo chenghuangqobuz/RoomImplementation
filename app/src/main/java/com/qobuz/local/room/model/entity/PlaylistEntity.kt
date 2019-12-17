@@ -1,11 +1,11 @@
-package com.qobuz.room.local.model.entity
+package com.qobuz.local.room.model.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "PlayList")
-data class PlayListEntity(
+@Entity(tableName = "Playlist")
+data class PlaylistEntity(
 
     @PrimaryKey
     @ColumnInfo(name = "playlistId")
@@ -14,6 +14,6 @@ data class PlayListEntity(
     @ColumnInfo(name = "name")
     val name: String?,
 
-    @ColumnInfo(name = "publicPlayList")
-    val publicPlayList: Boolean
+    @ColumnInfo(name = "publicPlaylist")
+    val publicPlaylist: Boolean
 )

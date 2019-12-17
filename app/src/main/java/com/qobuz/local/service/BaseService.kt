@@ -1,6 +1,6 @@
-package com.qobuz.room.local.service
+package com.qobuz.local.service
 
-import com.qobuz.room.local.dao.BaseDao
+import com.qobuz.local.room.dao.BaseDao
 
 abstract class BaseService<T>(val baseDao: BaseDao<T>) {
 
@@ -16,6 +16,5 @@ abstract class BaseService<T>(val baseDao: BaseDao<T>) {
         baseDao.delete(t)
     }
 
-
-    abstract fun deleteById(id : String)
+    abstract fun deleteById(id: String)
 }

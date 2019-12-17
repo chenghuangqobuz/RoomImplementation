@@ -1,9 +1,9 @@
-package com.qobuz.room.local.dao
+package com.qobuz.local.room.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
-import com.qobuz.room.local.model.entity.ArtistEntity
+import com.qobuz.local.room.model.entity.ArtistEntity
 
 @Dao
 abstract class ArtistDao : BaseDao<ArtistEntity>() {

@@ -1,4 +1,4 @@
-package com.qobuz.room.local.model.entity
+package com.qobuz.local.room.model.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -6,10 +6,10 @@ import androidx.room.ForeignKey
 import androidx.room.Index
 
 @Entity(
-    tableName = "PlayListTrackEntity", primaryKeys = ["playlistId", "trackId"],
+    tableName = "PlaylistTrack", primaryKeys = ["playlistId", "trackId"],
     foreignKeys = [
         ForeignKey(
-            entity = PlayListEntity::class,
+            entity = PlaylistEntity::class,
             parentColumns = ["playlistId"],
             childColumns = ["playlistId"],
             onDelete = ForeignKey.NO_ACTION
@@ -22,9 +22,8 @@ import androidx.room.Index
         )
     ],
     indices = [Index(value = ["playlistId", "trackId"], name = "index", unique = true)]
-
 )
-data class PlayListTrackEntity(
+data class PlaylistTrackEntity(
 
     @ColumnInfo(name = "playlistId")
     val playlistId: String,

@@ -1,7 +1,7 @@
-package com.qobuz.room.local.service
+package com.qobuz.local.service
 
-import com.qobuz.room.local.dao.TrackDao
-import com.qobuz.room.local.model.entity.TrackEntity
+import com.qobuz.local.room.dao.TrackDao
+import com.qobuz.local.room.model.entity.TrackEntity
 
 class TrackService(private val trackDao: TrackDao) : BaseService<TrackEntity>(trackDao) {
 

@@ -1,4 +1,4 @@
-package com.qobuz.room.local.dao
+package com.qobuz.local.room.dao
 
 import androidx.room.*
 

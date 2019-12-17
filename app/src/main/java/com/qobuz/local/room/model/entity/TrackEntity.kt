@@ -1,4 +1,4 @@
-package com.qobuz.room.local.model.entity
+package com.qobuz.local.room.model.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

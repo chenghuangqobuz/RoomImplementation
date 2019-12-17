@@ -1,4 +1,4 @@
-package com.qobuz.room
+package com.qobuz.local
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

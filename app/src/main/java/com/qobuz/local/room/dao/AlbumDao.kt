@@ -1,9 +1,9 @@
-package com.qobuz.room.local.dao
+package com.qobuz.local.room.dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.qobuz.room.local.model.entity.AlbumEntity
-import com.qobuz.room.local.model.relation.AlbumWithTracksRelation
+import com.qobuz.local.room.model.entity.AlbumEntity
+import com.qobuz.local.room.model.relation.AlbumWithTracksRelation
 
 @Dao
 abstract class AlbumDao : BaseDao<AlbumEntity>() {

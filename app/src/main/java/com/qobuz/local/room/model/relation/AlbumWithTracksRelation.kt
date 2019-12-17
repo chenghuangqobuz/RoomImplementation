@@ -1,10 +1,10 @@
-package com.qobuz.room.local.model.relation
+package com.qobuz.local.room.model.relation
 
 import androidx.room.Embedded
 import androidx.room.Junction
 import androidx.room.Relation
-import com.qobuz.room.local.model.entity.AlbumEntity
-import com.qobuz.room.local.model.entity.TrackEntity
+import com.qobuz.local.room.model.entity.AlbumEntity
+import com.qobuz.local.room.model.entity.TrackEntity
 
 data class AlbumWithTracksRelation(
 
