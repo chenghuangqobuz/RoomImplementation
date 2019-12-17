@@ -1,4 +1,4 @@
-package com.qobuz.room.local.model.query
+package com.qobuz.room.local.model.relation
 
 import androidx.room.Embedded
 import androidx.room.Junction
@@ -7,7 +7,7 @@ import com.qobuz.room.local.model.entity.PlayListEntity
 import com.qobuz.room.local.model.entity.PlayListTrackEntity
 import com.qobuz.room.local.model.entity.TrackEntity
 
-data class PlayListTrackQuery(
+data class PlayListWithTracksRelation(
 
     @Embedded
     val playlist: PlayListEntity,
