@@ -25,6 +25,7 @@ import androidx.room.Index
 
 )
 data class PlayListTrackEntity(
+
     @ColumnInfo(name = "playlistId")
     val playlistId: String,
 

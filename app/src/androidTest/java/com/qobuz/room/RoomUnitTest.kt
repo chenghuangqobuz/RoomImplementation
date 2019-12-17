@@ -70,5 +70,9 @@ class SimpleEntityReadWriteTest {
 
         val playListWithTracks = playListDao.getAllPlayListWithTracks()
         Log.e("PLAYLIST", playListWithTracks.toString())
+
+
+        val albumWithTrack = albumDao.getAlbumWithTracks(RoomModelUtils.album1.albumId)
+        Log.e("ALBUM", albumWithTrack.toString())
     }
 }
