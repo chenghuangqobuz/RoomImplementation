@@ -2,14 +2,25 @@ package com.qobuz.room.local.model.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Track")
+@Entity(
+    tableName = "Track",
+    foreignKeys = [
+        ForeignKey(
+            entity = AlbumEntity::class,
+            parentColumns = ["albumId"],
+            childColumns = ["albumId"],
+            onDelete = ForeignKey.NO_ACTION
+        )],
+    indices = [androidx.room.Index(name = "index_album_id", value = ["albumId"])]
+)
 data class TrackEntity(
 
     @PrimaryKey
-    @ColumnInfo(name = "id")
-    val id: String,
+    @ColumnInfo(name = "trackId")
+    val trackId: String,
 
     @ColumnInfo(name = "name")
     val name: String?,

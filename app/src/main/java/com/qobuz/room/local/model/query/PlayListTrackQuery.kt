@@ -7,7 +7,7 @@ import com.qobuz.room.local.model.entity.PlayListEntity
 import com.qobuz.room.local.model.entity.PlayListTrackEntity
 import com.qobuz.room.local.model.entity.TrackEntity
 
-class PlayListTrackQuery (
+data class PlayListTrackQuery(
 
     @Embedded
     val playlist: PlayListEntity,

@@ -8,12 +8,12 @@ import androidx.room.PrimaryKey
 data class PlayListEntity(
 
     @PrimaryKey
-    @ColumnInfo(name = "id")
-    val id: String,
+    @ColumnInfo(name = "playlistId")
+    val playlistId: String,
 
     @ColumnInfo(name = "name")
-    val name: String,
+    val name: String?,
 
-    @ColumnInfo(name = "public")
-    val public: Boolean
+    @ColumnInfo(name = "publicPlayList")
+    val publicPlayList: Boolean
 )
