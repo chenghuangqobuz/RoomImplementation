@@ -12,8 +12,8 @@ data class AlbumWithTracksRelation(
     val album: AlbumEntity,
 
     @Relation(
-        parentColumn = "albumId",
-        entityColumn = "albumId",
+        parentColumn = "album_id",
+        entityColumn = "album_id",
         associateBy = Junction(TrackEntity::class)
     )
     val tracks: List<TrackEntity>

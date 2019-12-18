@@ -10,16 +10,16 @@ import androidx.room.PrimaryKey
     foreignKeys = [
         ForeignKey(
             entity = AlbumEntity::class,
-            parentColumns = ["albumId"],
-            childColumns = ["albumId"],
+            parentColumns = ["album_id"],
+            childColumns = ["album_id"],
             onDelete = ForeignKey.NO_ACTION
         )],
-    indices = [androidx.room.Index(name = "index_album_id", value = ["albumId"])]
+    indices = [androidx.room.Index(name = "index_album_id", value = ["album_id"])]
 )
 data class TrackEntity(
 
     @PrimaryKey
-    @ColumnInfo(name = "trackId")
+    @ColumnInfo(name = "track_id")
     val trackId: String,
 
     @ColumnInfo(name = "name")
@@ -28,6 +28,6 @@ data class TrackEntity(
     @ColumnInfo(name = "length")
     val length: Int,
 
-    @ColumnInfo(name = "albumId")
+    @ColumnInfo(name = "album_id")
     val albumId: String
 )

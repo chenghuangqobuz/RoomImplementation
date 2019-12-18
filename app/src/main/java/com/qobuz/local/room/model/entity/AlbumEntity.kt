@@ -8,21 +8,21 @@ import androidx.room.ForeignKey.NO_ACTION
     foreignKeys = [
         ForeignKey(
             entity = ArtistEntity::class,
-            parentColumns = ["artistId"],
-            childColumns = ["artistId"],
+            parentColumns = ["artist_id"],
+            childColumns = ["artist_id"],
             onDelete = NO_ACTION
         )],
-    indices = [Index(name = "index_artist_id", value = ["artistId"])]
+    indices = [Index(name = "index_artist_id", value = ["artist_id"])]
 )
 data class AlbumEntity(
 
     @PrimaryKey
-    @ColumnInfo(name = "albumId")
+    @ColumnInfo(name = "album_id")
     val albumId: String,
 
     @ColumnInfo(name = "name")
     val name: String?,
 
-    @ColumnInfo(name = "artistId")
+    @ColumnInfo(name = "artist_id")
     val artistId: String
 )

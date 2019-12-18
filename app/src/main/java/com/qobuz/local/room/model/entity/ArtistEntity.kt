@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class ArtistEntity(
 
     @PrimaryKey
-    @ColumnInfo(name = "artistId")
+    @ColumnInfo(name = "artist_id")
     val artistId: String,
 
     @ColumnInfo(name = "name")

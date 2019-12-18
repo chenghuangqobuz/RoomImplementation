@@ -15,7 +15,7 @@ import org.junit.runner.RunWith
 import java.io.IOException
 
 @RunWith(AndroidJUnit4::class)
-class SimpleEntityReadWriteTest {
+class LocalTest {
     private lateinit var artistDao: ArtistDao
     private lateinit var albumDao: AlbumDao
     private lateinit var trackDao: TrackDao
@@ -45,29 +45,29 @@ class SimpleEntityReadWriteTest {
     @Test
     @Throws(Exception::class)
     fun writeUserAndReadInList() {
-        artistDao.insert(TestUtils.artist1)
-        artistDao.insert(TestUtils.artist2)
+        artistDao.insert(TestModels.artist1)
+        artistDao.insert(TestModels.artist2)
 
         val listResults = artistDao.getAll()
-        Assert.assertEquals(listOf(TestUtils.artist1, TestUtils.artist2).toString(), listResults.toString())
+        Assert.assertEquals(listOf(TestModels.artist1, TestModels.artist2).toString(), listResults.toString())
 
-        albumDao.insert(TestUtils.album1)
-        albumDao.insert(TestUtils.album2)
+        albumDao.insert(TestModels.album1)
+        albumDao.insert(TestModels.album2)
 
-        trackDao.upsert(TestUtils.album1Track1)
-        trackDao.upsert(TestUtils.album1Track2)
-        trackDao.upsert(TestUtils.album2Track1)
+        trackDao.upsert(TestModels.album1Track1)
+        trackDao.upsert(TestModels.album1Track2)
+        trackDao.upsert(TestModels.album2Track1)
 
+        val albums = albumDao.searchAlbumWithTracks(TestModels.album1.albumId)
 
-
-        playlistDao.upsert(TestUtils.playList1)
-        playlistDao.upsert(TestUtils.playList2)
+        playlistDao.upsert(TestModels.playList1)
+        playlistDao.upsert(TestModels.playList2)
 
         playlistTrackDao.upsert(listOf(
-            TestUtils.playList1Album1Track1,
-            TestUtils.playList1Album2Track1,
-            TestUtils.playList2Album1Track2,
-            TestUtils.playList2Album2Track1)
+            TestModels.playList1Album1Track1,
+            TestModels.playList1Album2Track1,
+            TestModels.playList2Album1Track2,
+            TestModels.playList2Album2Track1)
         )
 
 
@@ -75,7 +75,7 @@ class SimpleEntityReadWriteTest {
         Log.e("PLAYLIST", playListWithTracks.toString())
 
 
-        val albumWithTrack = albumDao.getAlbumWithTracks(TestUtils.album1.albumId)
+        val albumWithTrack = albumDao.getAlbumWithTracks(TestModels.album1.albumId)
         Log.e("ALBUM", albumWithTrack.toString())
     }
 }

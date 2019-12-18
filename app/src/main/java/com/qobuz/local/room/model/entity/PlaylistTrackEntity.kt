@@ -6,28 +6,28 @@ import androidx.room.ForeignKey
 import androidx.room.Index
 
 @Entity(
-    tableName = "PlaylistTrack", primaryKeys = ["playlistId", "trackId"],
+    tableName = "PlaylistTrack", primaryKeys = ["playlist_id", "track_id"],
     foreignKeys = [
         ForeignKey(
             entity = PlaylistEntity::class,
-            parentColumns = ["playlistId"],
-            childColumns = ["playlistId"],
+            parentColumns = ["playlist_id"],
+            childColumns = ["playlist_id"],
             onDelete = ForeignKey.SET_NULL
         ),
         ForeignKey(
             entity = TrackEntity::class,
-            parentColumns = ["trackId"],
-            childColumns = ["trackId"],
+            parentColumns = ["track_id"],
+            childColumns = ["track_id"],
             onDelete = ForeignKey.SET_NULL
         )
     ],
-    indices = [Index(value = ["playlistId", "trackId"], name = "index", unique = true)]
+    indices = [Index(value = ["track_id", "track_id"], name = "index", unique = true)]
 )
 data class PlaylistTrackEntity(
 
-    @ColumnInfo(name = "playlistId")
+    @ColumnInfo(name = "playlist_id")
     val playlistId: String,
 
-    @ColumnInfo(name = "trackId")
+    @ColumnInfo(name = "track_id")
     val trackId: String
 )

@@ -1,9 +1,8 @@
 package com.qobuz.local
 
-import com.qobuz.local.local.model.entity.*
 import com.qobuz.local.room.model.entity.*
 
-object TestUtils {
+object TestModels {
 
     val album1Track1 =
         TrackEntity("album1Track1", "album1Track1", 1, "album1")

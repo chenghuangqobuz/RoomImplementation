@@ -5,9 +5,8 @@ import androidx.room.Junction
 import androidx.room.Relation
 import com.qobuz.local.room.model.entity.PlaylistEntity
 import com.qobuz.local.room.model.entity.PlaylistTrackEntity
-import com.qobuz.local.room.model.entity.TrackEntity
 
-data class PlaylistWithTracksRelation(
+data class PlaylistWithTracksWithAlbumRelation(
 
     @Embedded
     val playlist: PlaylistEntity,
@@ -17,5 +16,5 @@ data class PlaylistWithTracksRelation(
         entityColumn = "track_id",
         associateBy = Junction(PlaylistTrackEntity::class)
     )
-    val tracks: List<TrackEntity>
+    val tracks: List<TrackWithAlbumRelation>
 )
