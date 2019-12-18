@@ -1,6 +1,6 @@
 package com.qobuz.local
 
-import com.qobuz.local.domain_model.Track
+import com.qobuz.domain_model.Track
 
 interface TrackLocalService {
 

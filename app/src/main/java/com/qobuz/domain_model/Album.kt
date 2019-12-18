@@ -1,4 +1,4 @@
-package com.qobuz.local.domain_model
+package com.qobuz.domain_model
 
 data class Album(
     val albumId: String,

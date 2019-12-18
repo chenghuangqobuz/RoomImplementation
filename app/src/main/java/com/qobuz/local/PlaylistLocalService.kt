@@ -1,6 +1,6 @@
 package com.qobuz.local
 
-import com.qobuz.local.domain_model.Playlist
+import com.qobuz.domain_model.Playlist
 
 interface PlaylistLocalService {
 

@@ -1,7 +1,7 @@
 package com.qobuz.local.room.service
 
 import com.qobuz.local.TrackLocalService
-import com.qobuz.local.domain_model.Track
+import com.qobuz.domain_model.Track
 import com.qobuz.local.room.dao.TrackDao
 import com.qobuz.local.room.mapper.Mapper
 import com.qobuz.local.room.model.entity.TrackEntity
